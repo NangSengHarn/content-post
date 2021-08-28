@@ -1,8 +1,9 @@
 <template>
-  <h1>Post lists</h1>
+ 
   <div v-for="post in posts" :key="post.id">
     <SinglePost :post="post"></SinglePost>
   </div>
+  
 </template>
 
 <script>
@@ -19,4 +20,5 @@ export default {
 </script>
 
 <style>
+
 </style>

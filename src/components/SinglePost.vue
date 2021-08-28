@@ -5,7 +5,7 @@
    </router-link>
     <p>{{cutPostBody}}</p>
     <div v-for="tag in post.tags" :key="tag" class="pill">
-        {{tag}}
+        <router-link :to="{name:'Tag', params:{tag}}">{{tag}}</router-link>
     </div>
    </div>
 </template>
@@ -29,6 +29,9 @@ export default {
     padding-bottom: 30px;
     border-bottom: 1px dashed #e7e7e7;
 }
+p {
+    color: grey;
+}
 .post h2{
     display: inline-block;
     position: relative;
@@ -42,7 +45,7 @@ export default {
     display: block;
     width:100%;
     height: 100%;
-    background: plum;
+    background: rgb(242, 180, 248);
     position: absolute;
     z-index: -1;
     padding-right: 40px;

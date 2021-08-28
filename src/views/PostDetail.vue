@@ -1,22 +1,31 @@
 <template>
-  <h1>Detail{{id}}</h1>
+
+<div class="post">
   <div v-if="post">
-      <h1>{{post.title}}</h1>
+      <h2>{{post.title}}</h2>
       <p>{{post.body}}</p>
+      <div v-for="tag in post.tags" :key="tag" class="pill">
+        {{tag}}
+    </div>
   </div>
   <div v-else>
       <Spinner></Spinner>
   </div>
+</div>
+  
 </template>
 
 <script>
 import Spinner from '../components/Spinner'
 import getSinglePost from "../composable/getSinglePost"
+import {useRoute} from "vue-router"
 export default {
   components: { Spinner },
     props:["id"],
     setup(props){
-        let {post,error,load}=getSinglePost(props.id);
+        let route=useRoute();
+
+        let {post,error,load}=getSinglePost(route.params.id);
         load();
         return {post,error};
 
@@ -26,5 +35,4 @@ export default {
 </script>
 
 <style>
-
 </style>

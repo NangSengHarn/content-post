@@ -10,12 +10,12 @@ export default {
 
 <style>
 .spin{
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     margin: 30px auto;
-    border:3px solid transparent;
+    border:5px solid transparent;
     border-radius: 50%;
-    border-top-color:plum;
+    border-top-color:#bbb;
     animation: spin 1s infinite;
 }
 @keyframes spin {
