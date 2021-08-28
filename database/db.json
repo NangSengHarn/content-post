@@ -1,0 +1,28 @@
+{
+  "post": [
+    {
+      "title": "Post 1",
+      "id": 1,
+      "body": "Lorem ipsum"
+    },
+    {
+      "title": "Post 2",
+      "id": 2,
+      "body": "Lorem ipsum"
+    },
+    {
+      "title": "Post 3",
+      "id": 3,
+      "body": "Lorem ipsum"
+    },
+    {
+      "title": "test",
+      "body": "test\n",
+      "tags": [
+        "html",
+        "css"
+      ],
+      "id": 4
+    }
+  ]
+}
