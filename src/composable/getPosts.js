@@ -9,7 +9,7 @@ let getPosts=()=>{
       try{
 
         //let response=await fetch("http://localhost:3000/post")
-          let response=await db.collection("posts").get()
+          let response=await db.collection("posts").orderBy("created_time","desc").get()
               
         if (response.status===404){
           throw new Error("Oops! URL not found")

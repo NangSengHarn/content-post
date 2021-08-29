@@ -15,7 +15,7 @@
 
 <script>
 import { useRouter } from 'vue-router';
-import {db} from '../firebase/config';
+import {db, timestamp} from '../firebase/config';
 import { ref } from '@vue/reactivity';
 export default {
     setup(){
@@ -36,7 +36,8 @@ export default {
             let newPost={
                         title:title.value,
                         body:body.value,
-                        tags:tags.value
+                        tags:tags.value,
+                        created_time:timestamp()
                     }
             let response= await db.collection("posts").add(newPost)
             //redirect router to home page
@@ -82,7 +83,7 @@ label::before{
     display: block;
     width: 100%;
     height:100%;
-    background: plum;
+    background: rgb(242, 180, 248);
     position: absolute;
     z-index: -1;
     padding-right: 40px;
@@ -92,8 +93,8 @@ label::before{
 button{
     display: block;
     margin-top: 30px;
-    background:violet;
-    color:rgb(144, 144, 144);
+    background:rgb(242, 180, 248);
+    color:honeydew;
     border:none;
     padding:8px 16px;
     font-size:18px;

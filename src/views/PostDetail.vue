@@ -45,5 +45,6 @@ export default {
 <style>
 button.delete {
   margin: 30px auto;
+  color: rgb(247, 137, 137);
 }
 </style>
